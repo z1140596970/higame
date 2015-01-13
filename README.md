@@ -1,2 +1,2 @@
 # higame
-tanchishe
+tanchishe is a game!
