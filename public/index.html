@@ -1,1 +1,487 @@
-Congrats, you just set up your cloud code project.
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>贪吃蛇V1.1-Download by http://www.codefans.net</title>
+
+<link rel="stylesheet" type="text/css" href="css/snake.css"/>
+
+<script type="text/javascript" src="js/snake.js"></script>
+
+<script type="text/javascript" src="js/control.js"></script>
+
+<!--[if lte IE 6]>
+<script src="js/ie6png.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        DD_belatedPNG.fix('div');
+    </script>
+
+<![endif]--> 
+
+</head>
+
+<body>
+<h1>贪吃蛇<sup>V1.1</sup></h1>
+<!--游戏主体部分-->
+<div id="canvas">
+<table width="400" height="400" border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+  </tr>
+  <tr>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+  </tr>
+  <tr>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+  </tr>
+  <tr>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+  </tr>
+  <tr>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+  </tr>
+  <tr>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+  </tr>
+  <tr>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+  </tr>
+  <tr>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+  </tr>
+  <tr>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+  </tr>
+  <tr>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20" id="initPos"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+  </tr>
+  <tr>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+  </tr>
+  <tr>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+  </tr>
+  <tr>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+  </tr>
+  <tr>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+  </tr>
+  <tr>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+  </tr>
+  <tr>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+  </tr>
+  <tr>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+  </tr>
+  <tr>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+  </tr>
+  <tr>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+  </tr>
+  <tr>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+    <td width="20" height="20"></td>
+  </tr>
+</table>
+<!--加载提示-->
+<div id="loadingTip">正在加载，请稍后...</div>
+<div id="start">请按方向键开始！</div>
+<div id="pause">暂停<p>按空格键或方向键继续</p></div>
+<div id="over">Game Over<p>按R键或回车键继续</p></div>
+</div>
+<div class="pageInfo">
+<h2>操作说明：</h2>
+<ol>
+	<li>键盘方向键（上下左右）：控制方向(长按加速)</li>
+    <li>空格键（Space）：暂停/开始</li>
+    <li>R键或回车键：重置游戏</li>
+</ol>
+</div>
+</body>
+</html>
