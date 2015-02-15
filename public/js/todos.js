@@ -8,7 +8,7 @@ $(function() {
   AV.$ = jQuery;
 
   //用config.js中的appId，appKey初始化，若你搭建自己的Todo，请用你的appId与appKey
-  AV.initialize(tbw9znybfwp0rp31tlpqjpzorvbb9muobq2k675c4y0kcd8e, ebqe9m0qjlpx00x33vgi0uqenuzjcx894g3ygwonmzio2gbi);
+  AV.initialize(appId, appKey);
 
   // Todo Model
   // ----------
