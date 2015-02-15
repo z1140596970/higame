@@ -1,5 +1,5 @@
 /**
  * Created by lzw on 14-8-21.
  */
-var appId='ozewwcwsyq92g2hommuxqrqzg6847wgl8dtrac6suxzko333';
-var appKey='ni0kwg7h8hwtz6a7dw9ipr7ayk989zo5y8t0sn5gjiel6uav';
+var appId='tbw9znybfwp0rp31tlpqjpzorvbb9muobq2k675c4y0kcd8e';
+var appKey='ebqe9m0qjlpx00x33vgi0uqenuzjcx894g3ygwonmzio2gbi';
